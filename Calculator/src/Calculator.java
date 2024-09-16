@@ -1,22 +1,31 @@
-import java.util.Scanner;
-
 import javax.swing.JOptionPane;
 
 public class Calculator {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Substraction\n3. Multiplication\n4. Divition");
-        //Lmao
+
+        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Divition");
+        double x = Double.parseDouble(JOptionPane.showInputDialog("First number: ")), y = Double.parseDouble(JOptionPane.showInputDialog("Second Number: ")), result = 0;
+
         switch (option) {
+            case "1":
             case "Addition":
-                double x = input.nextInt(), y = input.nextInt();
-                
+                result = Addition(x, y);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;
-            case "Substraction:":
+            case "Subtraction:":
+            case "2":
+                result = Subtraction(x, y);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;
+            case "3":
             case "Multiplication":
+                result = Multiplication(x, y);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;
+            case "4":
             case "Divition":
+                result = Divition(x, y);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;  
             default:
                 break;
@@ -29,7 +38,7 @@ public class Calculator {
         return x + y;
     }
 
-    public static double Substraction(double x, double y){
+    public static double Subtraction(double x, double y){
         return x - y;
     }
 
