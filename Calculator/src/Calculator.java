@@ -7,7 +7,7 @@ public class Calculator {
         double x = Double.parseDouble(JOptionPane.showInputDialog("First number: ")), y = Double.parseDouble(JOptionPane.showInputDialog("Second Number: ")), result = 0;
         Operations Addition = new Operations(), Subtraction = new Operations(), Multiplication = new Operations(), Divition = new Operations();
         
-        //TODO: Need to find a way to integrate N variable into the operations, possible through Object Overload.
+        //TODO: Need to find a way to integrate N variable into the operations, possible through Method Overload.
         switch (option) {
             case "1":
             case "Addition":

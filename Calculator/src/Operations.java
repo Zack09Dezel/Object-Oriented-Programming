@@ -1,5 +1,5 @@
 public class Operations {
-    //! Need to learn object overload.
+    //! Need to learn Method overload.
     public double Addition(double x, double y){
         return x + y;
     }
@@ -16,6 +16,6 @@ public class Operations {
         return x / y;
     }
 
-    // TODO: Add more functions like Modulo, Power(N), Square Root, Log, Ln, Absolute, Trigonometry, etc.
+    //TODO: Add more functions like Modulo, Power(N), Square Root, Log, Ln, Absolute, Trigonometry, etc.
 
 }
