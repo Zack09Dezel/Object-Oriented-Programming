@@ -11,21 +11,25 @@ public class Calculator {
         switch (option) {
             case "1":
             case "Addition":
+            case "1. Addition":
                 result = Addition.Addition(x, y);
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;
             case "2":
             case "Subtraction:":
+            case "2. Subtraction":
                 result = Subtraction.Subtraction(x, y);
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;
             case "3":
             case "Multiplication":
+            case "3. Multiplication":
                 result = Multiplication.Multiplication(x, y);
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;
             case "4":
             case "Divition":
+            case "4. Divitioni":
                 result = Divition.Divition(x, y);
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;  
