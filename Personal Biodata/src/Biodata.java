@@ -12,9 +12,9 @@ public class Biodata {
     }
 
     void print() {
-        System.out.println("Name: " + name);
+        System.out.println("\nName: " + name);
         System.out.println("Age: " + age);
-        System.out.println("Student Identification Number: " + nim);
+        System.out.println("Student ID Number: " + nim);
         System.out.print("Hobbies: ");
         for(int i = 0; i < hobbies.length; i++){
             if(i < hobbies.length - 1){
