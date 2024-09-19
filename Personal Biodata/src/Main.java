@@ -5,6 +5,10 @@ public class Main {
         Scanner input = new Scanner(System.in);
         Biodata person = new Biodata();
 
+        System.out.println("\n============================");
+        System.out.println("||    Personal Biodata    ||");
+        System.out.println("============================\n");
+
         System.out.print("What is your name? ");
         String name = input.nextLine();
         System.out.print("How old are you? ");
@@ -21,6 +25,9 @@ public class Main {
         for(int i = 0; i < totalHobbies;i++){
             System.out.print("Hobby number "+(i + 1)+": ");
             hobbies[i] = input.nextLine();
+            if (hobbies[i].isEmpty()) {
+                hobbies[i] = "-";
+            }
         }
 
         person.scan(name, age, nim, hobbies);
