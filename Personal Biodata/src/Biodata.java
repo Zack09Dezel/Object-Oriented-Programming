@@ -2,7 +2,7 @@ public class Biodata {
     String name;
     int age;
 
-    public Biodata(String name, String[] hobby, int age) {
+    public Biodata(String name, int age) {
         this.name = name;
         this.age = age;
     }
