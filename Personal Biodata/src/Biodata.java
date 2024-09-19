@@ -1,14 +1,19 @@
 public class Biodata {
     String name;
     int age;
+    long nim;
+    String[] hobbies;
 
-    public Biodata(String name, int age) {
+    void scan(String name, int age, long nim) {
         this.name = name;
         this.age = age;
+        this.nim = nim;
     }
 
-    public void print(){
-        System.out.println("Name: "+name);
-        System.out.println("Age: "+age);
+    void print() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Student Identification Number: " + nim);
+        System.out.println();
     }
 }
