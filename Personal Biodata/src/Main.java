@@ -9,9 +9,19 @@ public class Main {
         String name = input.nextLine();
         int age = input.nextInt();
         long nim = input.nextLong();
-        input.nextLine();  //! Bersihin sisa nextLong & nextInt
+        input.nextLine();  
 
-        person.scan(name, age, nim);
+        System.out.println("How many are your hobbies?");
+        int totalHobbies = input.nextInt();
+        input.nextLine();
+
+        String[] hobbies = new String[totalHobbies];
+        for(int i = 0; i < totalHobbies;i++){
+            System.out.println("Hobby number "+(i + 1)+": ");
+            hobbies[i] = input.nextLine();
+        }
+
+        person.scan(name, age, nim, hobbies);
 
         input.close();
         person.print();
