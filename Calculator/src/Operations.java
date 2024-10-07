@@ -16,6 +16,10 @@ public class Operations {
         return x / y;
     }
 
+    public double Modulo(double x, double y){
+        return x % y;
+    }
+
     //TODO: Add more functions like Modulo, Power(N), Square Root, Log, Ln, Absolute, Trigonometry, etc.
 
 }

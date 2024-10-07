@@ -3,7 +3,8 @@ import javax.swing.JOptionPane;
 public class Calculator {
     public static void main(String[] args) {
 
-        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Divition");
+        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Divition\n" + //
+                        "5. Modulo");
         double x = Double.parseDouble(JOptionPane.showInputDialog("First number: ")), y = Double.parseDouble(JOptionPane.showInputDialog("Second Number: ")), result = 0;
         Operations Addition = new Operations(), Subtraction = new Operations(), Multiplication = new Operations(), Divition = new Operations();
         
@@ -31,6 +32,12 @@ public class Calculator {
             case "Divition":
             case "4. Divitioni":
                 result = Divition.Divition(x, y);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
+                break;  
+            case "5":
+            case "Modulo":
+            case "5. Modulo":
+                result = Divition.Modulo(x, y);
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;  
             default:
