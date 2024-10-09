@@ -3,7 +3,7 @@ import javax.swing.JOptionPane;
 public class Calculator {
     public static void main(String[] args) {
         
-        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Divition\n5. Modulo");
+        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Divition\n5. Modulo\n6. Logten\n7. LogArbitrary");
         double x = Double.parseDouble(JOptionPane.showInputDialog("First number: ")), y = Double.parseDouble(JOptionPane.showInputDialog("Second Number: ")), result = 0;
         Operations operation = new Operations();
         
@@ -39,6 +39,25 @@ public class Calculator {
                 result = operation.Modulo(x, y);
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;  
+            case "6":
+            case "Logten":
+            case "6. Logten":
+                result = operation.Logten(x);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
+                break;
+                // work in progress bruh
+            case "7":
+            case "LogArbitrary":
+            case "7. LogArbitrary":
+                result = operation.LogArbitrary(x, y);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
+                break;
+            case "8":
+            case "LogPremium":
+            case "8. LogPremium":
+                result = operation.LogArbitrary(x, y);
+                JOptionPane.showMessageDialog(null, "The result is: "+result);
+                break;
             default:
                 JOptionPane.showMessageDialog(null, "Invalid option selected.");
                 break;
