@@ -40,6 +40,7 @@ public class Calculator {
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;  
             default:
+                JOptionPane.showMessageDialog(null, "Invalid option selected.");
                 break;
         }
 
