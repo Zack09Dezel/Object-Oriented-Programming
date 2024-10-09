@@ -30,3 +30,4 @@ public class Biodata {
         System.out.println();
     }
 }
+
