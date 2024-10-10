@@ -3,8 +3,8 @@ import javax.swing.JOptionPane;
 public class Calculator {
     public static void main(String[] args) {
         
-        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Divition\n5. Modulo\n6. Logten\n7. LogArbitrary");
-        double x = Double.parseDouble(JOptionPane.showInputDialog("First number: ")), y = Double.parseDouble(JOptionPane.showInputDialog("Second Number: ")), result = 0;
+        String option = JOptionPane.showInputDialog("What do you want to do? \n1. Addition\n2. Subtraction\n3. Multiplication\n4. Divition\n5. Modulo\n6. Logten\n7. LogArbitrary\n8. LogPremium");
+        double x = Double.parseDouble(JOptionPane.showInputDialog("First number: ")), y = Double.parseDouble(JOptionPane.showInputDialog("Second Number: ")),result = 0;
         Operations operation = new Operations();
         
         //TODO: Need to find a way to integrate N variable into the operations, possible through Method Overload.
@@ -55,7 +55,7 @@ public class Calculator {
             case "8":
             case "LogPremium":
             case "8. LogPremium":
-                result = operation.LogArbitrary(x, y);
+                result = operation.LogPremium(x, y, 0);
                 JOptionPane.showMessageDialog(null, "The result is: "+result);
                 break;
             default:

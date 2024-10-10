@@ -31,32 +31,28 @@ public class Operations {
         // wokr in progress
     }
 
-    public double LogPremium(double x, double y){
-        double result = 0.0;
-        double current = 1.0; // Nilai awal dari base^result
-        //  y = base
-         
-        // Incremental untuk menghitung logaritma dengan akurasi terbatas
-        while (current < x) {
-            current *= y;
-            result += 1.0;
+    public double LogPremium(double x, double y, Integer J){
+    double result = 0.0;
+
+    // Mencari bagian integer terlebih dahulu
+    while (x >= y) {
+        x /= y;
+        result += 1.0;
+    }
+
+    // Menambahkan bagian desimal dengan presisi terbatas
+    double fraction = 0.1;
+    while (fraction > 1e-10) { // Presisi, bisa diatur sesuai kebutuhan
+        // Meningkatkan hasilnya dengan increment fraction
+        while (x >= Math.pow(y, fraction)) {
+            x /= Math.pow(y, fraction);
+            result += fraction;
         }
-         
-        // Menambahkan bagian desimal dengan presisi terbatas
-        double fraction = 0.1;
-        while (current > x) {
-            current /= y;
-            result -= 1.0;
-        }
-        while (fraction >= 1e-10) {
-            while (current * y <= x) {
-                current *= y;
-                result += fraction;
-            }
-            fraction /= 10.0;
-        }
-         
-        return result;
+        fraction /= 10.0; // Kurangi fraction untuk presisi lebih tinggi
+    }
+
+    return result;
+        
     }
     
     //TODO: Add more functions like Modulo, Power(N), Square Root, Log, Ln, Absolute, Trigonometry, etc.
