@@ -28,23 +28,19 @@ public class Calculator {
         double x = 0, y = 0, result = 0;
         AbstractOperations operation;
 
-        // Determine the operation type
         if (Integer.parseInt(option) > 4) {
             operation = new SciOperations();
         } else {
             operation = new Operations();
         }
 
-        // List of operations that only require one number
         List<String> singleInputOptions = Arrays.asList("5", "7", "8", "9", "10", "11", "12", "13", "14", "16", "17");
 
-        // Input handling
         x = Double.parseDouble(JOptionPane.showInputDialog("Enter the first number:"));
         if (!singleInputOptions.contains(option)) {
             y = Double.parseDouble(JOptionPane.showInputDialog("Enter the second number:"));
         }
 
-        // Perform the selected operation
         switch (option) {
             case "1":
             case "Addition":
@@ -136,7 +132,6 @@ public class Calculator {
                 return;
         }
 
-        // Display the result
         JOptionPane.showMessageDialog(null, "The result is: " + result);
     }
 }
