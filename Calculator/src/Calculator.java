@@ -40,7 +40,7 @@ public class Calculator {
         if (!singleInputOptions.contains(option)) {
             y = Double.parseDouble(JOptionPane.showInputDialog("Enter the second number:"));
         }
-
+// hailn hitlerr
         switch (option) {
             case "1":
             case "Addition":
