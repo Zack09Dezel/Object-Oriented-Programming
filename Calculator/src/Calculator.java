@@ -60,7 +60,6 @@ public class Calculator {
             case "4":
             case "Division":
             case "4. Division":
-            // lmao tod
                 result = operation.division(x, y);
                 break;
             case "5":
